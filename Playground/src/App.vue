@@ -3,6 +3,7 @@ import HelloWorldVue from "/src/components/HelloWorld.vue";
 
 export default {
   name: "App",
+
   components: {
     HelloWorld: HelloWorldVue,
   },

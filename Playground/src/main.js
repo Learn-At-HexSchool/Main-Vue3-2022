@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import App from '/src/App.vue'
-// import App from './App.vue'
+
+/** end of import */
 
 createApp(App).mount('#app')
