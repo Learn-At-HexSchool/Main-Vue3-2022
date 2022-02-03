@@ -12,12 +12,13 @@ export default {
                 password: '',
             },
         }
+        /** end of return */
     },
+    /** end of data() */
 
     components: {
         'login-card': LoginVue,
     },
-
     /**
      * 【模板格式】
      * :先綁定內層子元素的命名="外面變數的命名"
@@ -28,7 +29,6 @@ export default {
             :user="user"   
 
         ></login-card>
-
     `,
     /** end of template */
 
@@ -39,4 +39,7 @@ export default {
     mounted() {
         console.log("mounted-AppJS");
     },
+    /** end of mounted() */
+
 };
+/** end of export-default */

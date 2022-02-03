@@ -48,24 +48,27 @@ export default {
 
     methods: {
         goToDesk() {
+            alert(`2-goToDesk()`)
             window.location = 'desk.html';
         },
         /** end of goToDesk() */
 
         login() {
+            alert(`1-login()`)
             this.hintMsg = '驗證中';
-            // post -> token -> cookie -> window
+            // post -> token -> cookie -> location
             const user = this.user;
-            // alert(user.username)
 
             // #DEV:
             apiLogin(user)
                 .then((response) => {
+                    alert(`1.1-then`)
                     // console.dir(response);
                     const { success, message } = response.data;
                     this.hintMsg = message;
                     if (!success) {
                         return
+                        // #TODO:
                         // throw new Error(message);
                     }
 
@@ -78,12 +81,13 @@ export default {
 						SameSite=Lax; Secure; 
 					`;
 
+                    // #TODO:
                     localStorage.setItem('hasLog', Date.now())
-                    // #DEV:
-                    // this.goToDesk()
+                    this.goToDesk()
                 })
                 .catch((error) => {
-                    console.dir(error);
+                    alert(`1.2-catch`)
+                    // console.dir(error);
                     // console.log(error.toJSON());
                     const { data } = error.response;
                     this.hintMsg = data.message;
@@ -93,28 +97,41 @@ export default {
         /** end of login() */
 
         hasLogChecker() {
+            alert(`0-hasLogChecker()`)
+            this.hintMsg = 'Hi!';
+
             if (!localStorage.getItem('hasLog')) {
-                return alert('Hi')
+                return
             }
-            // #DEV:
+
+            // #TODO:
             // this.goToDesk()
         },
         /** end of hasLogChecker() */
     },
     /** end of methods: */
 
-    // <p>{{ user.username }}</p>
-    // <span>{{ user.password }}</span>
-    template: `        
-        <form class="login-form" id="loginApp"  @submit.prevent="login">            
+
+    created() {
+        console.log("created-loginApp");
+    },
+    mounted() {
+        console.log('mounted-loginApp')
+        this.hasLogChecker()
+    },
+    /** end of mounted() */
+
+
+
+    template: `
+        <form class="login-form" id="loginApp"  @submit.prevent="login">
             <h1  v-show="hintMsg">{{ hintMsg }}</h1>
-            
-        
+
             <div class="email">
                 <label for="inputEmail"></label>
                 <input	id="inputEmail"
                         type="email"
-                        name="username"                        
+                        name="username"
                         v-model.lazy="user.username"
                         v-model.trim="user.username"
                         placeholder="example@test.com"
@@ -144,15 +161,5 @@ export default {
     `,
     /** end of template */
 
-
-    created() {
-        console.log("created-loginApp");
-    },
-    mounted() {
-        console.log('mounted-loginApp')
-        this.hintMsg = 'Hi!'
-        this.hasLogChecker()
-    },
-    /** end of mounted() */
 };
 /** end of export-default */

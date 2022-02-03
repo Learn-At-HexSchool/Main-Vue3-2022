@@ -45,8 +45,8 @@ const token = document.cookie.replace(
 // console.log(document.cookie)
 
 loginReq.defaults.headers.common.Authorization = token;
+adminReq.defaults.headers.common.Authorization = token;
 // loginReq.defaults.headers.common['Authorization'] = token;
-// adminReq.defaults.headers.common.Authorization = token;
 /** end of definition */
 
 
@@ -69,6 +69,5 @@ export const apiGetProductList = () => {
     return adminReq.get('products');
 };
 /** end of adminReq */
-
 
 /** end of export-api */

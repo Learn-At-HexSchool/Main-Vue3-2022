@@ -6,11 +6,13 @@ html,
 body {
     background: #212534;
     background-size: cover;
-    overflow: hidden;
+    /* #DEBUG: */
+    /* overflow: visible; */
     -webkit-text-size-adjust: auto;
 }
 
 /* end of Global */
+
 
 #login-card {
     position: absolute;
@@ -18,11 +20,13 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+
     margin: auto;
     padding: 0.7rem;
     width: 65vh;
     height: 75vh;
     text-align: center;
+
     border-radius: 5px;
     background: rgba(3, 3, 3, 0.25);
     box-shadow: 1px 1px 50px #000;
@@ -31,8 +35,9 @@ body {
 #login-card h1 {
     position: relative;
     text-align: center;
-    color: #ddd;
+
     text-shadow: 3px 3px 10px #000;
+    color: #ddd;
 }
 
 .login-form {
@@ -41,6 +46,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+
     margin: auto;
     width: 65vh;
     height: 50vh;
@@ -56,16 +62,18 @@ body {
 }
 
 input {
-    text-decoration: none;
     position: relative;
-    width: 80%;
     display: block;
+    width: 80%;
     margin: 9px auto;
-    font-weight: 700;
-    color: #fff;
     padding: 8px;
-    border-radius: 6px;
+
+    text-decoration: none;
+    font-weight: 900;
     border: none;
+    border-radius: 6px;
+    color: #fff;
+
     background: rgba(3, 3, 3, 0.1);
     -webkit-transition: all 2s ease-in-out;
     -moz-transition: all 2s ease-in-out;
@@ -87,17 +95,19 @@ input:focus {
     color: #f40;
 }
 
+
 .login-btn {
     position: relative;
+    overflow: hidden;
     width: 80%;
     margin: 1rem;
-    overflow: hidden;
+
     border-radius: 5px;
     box-shadow: 5px 10px 70px #fff;
     /* color: #fff; */
     font-weight: 900;
-    opacity: 0.4;
     cursor: pointer;
+    opacity: 0.4;
 }
 
 a:hover {
