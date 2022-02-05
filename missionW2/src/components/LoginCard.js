@@ -1,4 +1,5 @@
-import { apiLogin } from '/src/scripts/apis.js';
+import { apiLogin } from '../scripts/apis.js';
+
 // console.log(apiLogin);
 /** end of import */
 

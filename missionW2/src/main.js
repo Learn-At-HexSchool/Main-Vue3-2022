@@ -1,4 +1,6 @@
-import { createApp } from '../node_modules/vue/dist/vue.esm-bundler.js';
+import { createApp } from "https://unpkg.com/vue@3.2.29/dist/vue.esm-browser.js";
+console.log('from module script:', typeof createApp);
+// import { createApp } from '/node_modules/vue/dist/vue.esm-bundler.js';
 // import { createApp } from 'vue'
 
 import App from './AppJS.js'

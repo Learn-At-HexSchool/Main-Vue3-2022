@@ -85,6 +85,8 @@
 - [x] 用該帳號去申請新的路徑：`API_PATH`
 
 - [x] Github-Pages
+  - [ ] 改成相對路徑
+    - <https://quip.com/yueUAcZwlcab>
 
 ---
 

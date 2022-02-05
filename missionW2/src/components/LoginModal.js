@@ -1,4 +1,4 @@
-import { apiLogCheck, apiGetProductList } from '/src/scripts/apis.js';
+import { apiLogCheck, apiGetProductList } from '../scripts/apis.js';
 // console.log(apiLogin);
 /** end of import */
 
