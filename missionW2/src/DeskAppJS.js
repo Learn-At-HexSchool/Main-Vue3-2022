@@ -1,4 +1,4 @@
-import LogModalVue from "/src/components/LoginModal.js";
+import LogModalVue from "./components/LoginModal.js";
 /** end of import */
 
 export default {

@@ -1,4 +1,4 @@
-import LoginVue from "/src/components/LoginCard.js";
+import LoginVue from "./components/LoginCard.js";
 /** end of import */
 
 

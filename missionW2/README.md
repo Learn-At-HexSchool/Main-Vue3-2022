@@ -1,6 +1,10 @@
 # Mission-W2_HexVUE-2022
 
-- <https://learn-at-hexschool.github.io/Main-Vue3-2022/Mission2/>
+- `index`
+  - <https://learn-at-hexschool.github.io/Main-Vue3-2022/missionW2/>
+
+- `CodeSandbox`
+  - <https://1hcly.csb.app/>
 
 ---
 

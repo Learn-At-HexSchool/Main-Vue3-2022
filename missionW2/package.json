@@ -1,6 +1,7 @@
 {
   "name": "mission-w2",
   "version": "0.0.0",
+  "main": "index.html",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
